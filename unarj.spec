@@ -55,35 +55,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc unarj.doc.gz
 %attr(755,root,root) %{_bindir}/unarj
-
-%changelog
-* Thu Feb 25 1999 Maciej Le¶niewski <nimir@kis.p.lodz.pl>
-  [2.41a-10]
-- fixed gziped docs.
-
-* Thu Feb 10 1999 Micha³ Kuratczyk <kurkens@polbox.com>
-  [2.41a-9]
-- added Group(pl)
-- sloted BuildRoot into PLD standard
-- added gzipping man page
-
-* Wed Nov 13 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.41a-8]
-- fixed passing $RPM_OPT_FLAGS flags.
-
-* Wed Jun 17 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-- added pl translation,
-- changed Buildroot to /tmp/%%{name}-%%{version}-root,
-- added using %%{name} and %%{version} in Source,
-- added using $RPM_OPT_FLAGS during compile,
-- added %attr and %defattr macros in %files (allows build package from
-  non-root account).
-
-* Mon Apr 27 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Wed Oct 22 1997 Otto Hammersmith <otto@redhat.com>
-- fixed src url
-
-* Fri Jul 18 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
