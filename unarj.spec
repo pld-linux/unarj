@@ -11,7 +11,7 @@ Group(pl):	Narzêdzia/Archiwizacja
 Copyright:	distributable
 Source:		ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}241a.tar.gz
 Patch:		unarj-opt.patch
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The unarj program is used to uncompress .arj format archives,
