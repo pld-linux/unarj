@@ -1,3 +1,4 @@
+# SECURITY TODO: CAN-2004-0947 CAN-2004-1027
 Summary:	Decompressor for .arj format archives
 Summary(de):	Dekomprimierer für .arj-Archive
 Summary(es):	Descompresor para archivos en formato .arj
