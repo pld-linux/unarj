@@ -10,8 +10,8 @@ Summary(uk):	äÅËÏÍĞÒÅÓÏÒ ÄÌÑ ÁÒÈ¦×ÎÉÈ ÆÁÊÌ¦× ÆÏÒÍÁÔÕ .arj
 Name:		unarj
 Version:	2.63a
 Release:	2
-Group:		Applications/Archiving
 License:	distributable
+Group:		Applications/Archiving
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
 # Source0-md5:	a83d139c245f911f22cb1b611ec9768f
 Patch0:		%{name}-opt.patch
@@ -59,7 +59,7 @@ tabanlı makinelerde sıkça kullanılan bir sıkıştırma biçimidir.
 
 %build
 %{__make} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CFLAGS="-Wall -ansi -pedantic -DUNIX %{rpmcflags}" \
 	LDFLAGS="%{rpmldflags}"
 
