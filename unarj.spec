@@ -63,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 - changed Buildroot to /tmp/%%{name}-%%{version}-root,
 - added using %%{name} and %%{version} in Source,
 - added using $RPM_OPT_FLAGS during compile,
-- added %attr and %defattr macros in %files (allow build package from
+- added %attr and %defattr macros in %files (allows build package from
   non-root account).
 
 * Mon Apr 27 1998 Prospector System <bugs@redhat.com>
