@@ -4,14 +4,17 @@ Summary(es):	Descompresor para archivos en formato .arj
 Summary(fr):	DИcompresseur pour les archives .arj
 Summary(pl):	Program rozpakowuj╠cy archiwa ARJ
 Summary(pt_BR):	Descompactador para arquivos no formato .arj
+Summary(ru): Декомпрессор для архивных файлов формата .arj
 Summary(tr):	ARJ biГimindeki arЧivleri aГan araГ
+Summary(uk): Декомпресор для арх╕вних файл╕в формату .arj
 Name:		unarj
 Version:	2.43
-Release:	9
+Release:	11
 Group:		Applications/Archiving
 License:	distributable
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-subdir.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,15 +41,25 @@ popularnym w systemach opartych o DOS.
 O programa unarj И usado para descomprimir armazenagens em formato
 .arj, que era algo popular em mАquinas DOS.
 
+%description -l ru
+Программа unarj используется для декомпрессии архивов формата .arj,
+популярного преимущественно в мире DOS.
+
 %description -l tr
 unarj, arj biГimindeki arЧivler iГin aГma programЩdЩr. ARJ, DOS
 tabanlЩ makinelerde sЩkГa kullanЩlan bir sЩkЩЧtЩrma biГimidir.
 
+%description -l uk
+Програма unarj використову╓ться для декомпрес╕╖ арх╕в╕в формату .arj,
+популярного переважно в св╕т╕ DOS.
+
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+%{__make} clean
 %{__make} \
 	CC=%{__cc} \
 	CFLAGS="-Wall -ansi -pedantic -DUNIX %{rpmcflags}" \
