@@ -5,7 +5,7 @@ Summary(pl): Program rozpakowuj±cy archiwa ARJ
 Summary(tr): ARJ biçimindeki arþivleri açan araç
 Name:        unarj
 Version:     2.41a
-Release:     9
+Release:     10
 Group:       Utilities/Archiving
 Group(pl):   Narzêdzia/Archiwizacja
 Copyright:   distributable
@@ -53,10 +53,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644, root, root, 755)
-%doc unarj.doc
+%doc unarj.doc.gz
 %attr(755, root, root) /usr/bin/unarj
 
 %changelog
+* Thu Feb 25 1999 Maciej Le¶niewski <nimir@kis.p.lodz.pl>
+  [2.41a-10]
+- fixed gziped docs.
+
 * Thu Feb 10 1999 Micha³ Kuratczyk <kurkens@polbox.com>
   [2.41a-9]
 - added Group(pl)
