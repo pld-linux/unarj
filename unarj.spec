@@ -8,14 +8,15 @@ Summary(ru):	Декомпрессор для архивных файлов формата .arj
 Summary(tr):	ARJ biГimindeki arЧivleri aГan araГ
 Summary(uk):	Декомпресор для арх╕вних файл╕в формату .arj
 Name:		unarj
-Version:	2.43
-Release:	11
+Version:	2.63a
+Release:	2
 Group:		Applications/Archiving
 License:	distributable
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
-# Source0-md5:	7a481dc017f1fbfa7f937a97e66eb99f
+# Source0-md5:	a83d139c245f911f22cb1b611ec9768f
 Patch0:		%{name}-opt.patch
-Patch1:		%{name}-subdir.patch
+Patch1:		%{name}-overflow.patch
+Patch2:		%{name}-path.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -77,5 +78,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc unarj.doc
+%doc technote.txt unarj.txt
 %attr(755,root,root) %{_bindir}/unarj
