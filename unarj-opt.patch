@@ -1,0 +1,11 @@
+--- unarj241a/Makefile~	Sun Apr 10 11:03:43 1994
++++ unarj241a/Makefile	Tue Oct 13 21:55:45 1998
+@@ -4,7 +4,7 @@
+ #
+ 
+ CC = gcc
+-CFLAGS = -O2 -Wall -ansi -pedantic -DUNIX
++CFLAGS = -O2 -Wall -ansi -pedantic -DUNIX $(OPT_FLAGS) 
+ INSTALLDIR=/usr/local/bin
+ 
+ unarj: unarj.o decode.o environ.o
