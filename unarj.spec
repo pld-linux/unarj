@@ -5,12 +5,13 @@ Summary(pl): Program rozpakowuj±cy archiwa ARJ
 Summary(tr): ARJ biçimindeki arþivleri açan araç
 Name:        unarj
 Version:     2.41a
-Release:     8
+Release:     9
+Group:       Utilities/Archiving
+Group(pl):   Narzêdzia/Archiwizacja
 Copyright:   distributable
 Source:      ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}241a.tar.gz
 Patch:       %{name}-%{version}-opt.patch
-Group:       Utilities/Archiving
-Buildroot:   /var/tmp/%{name}-%{version}-root
+Buildroot:   /tmp/%{name}-%{version}-root
 
 %description
 The unarj program is used to uncompress .arj format archives,
@@ -37,13 +38,15 @@ makinelerde sýkça kullanýlan bir sýkýþtýrma biçimidir.
 %patch -p1
 
 %build
-make CFLAGS="-Wall -ansi -pedantic -DUNIX $RPM_OPT_FLAGS"
+make CFLAGS="-Wall -ansi -pedantic -DUNIX $RPM_OPT_FLAGS" LDFLAGS=-s
 
 %install
 rm -rf $RPM_BUILD_ROOT 
 install -d $RPM_BUILD_ROOT/usr/bin
 
 install -s unarj $RPM_BUILD_ROOT/usr/bin
+
+gzip -9nf unarj.doc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -54,6 +57,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755, root, root) /usr/bin/unarj
 
 %changelog
+* Thu Feb 10 1999 Micha³ Kuratczyk <kurkens@polbox.com>
+  [2.41a-9]
+- added Group(pl)
+- sloted BuildRoot into PLD standard
+- added gzipping man page
+
 * Wed Nov 13 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [2.41a-8]
 - fixed passing $RPM_OPT_FLAGS flags.
