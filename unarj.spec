@@ -13,7 +13,7 @@ Release:	11
 Group:		Applications/Archiving
 License:	distributable
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
-# Source-md5:	7a481dc017f1fbfa7f937a97e66eb99f
+# Source0-md5:	7a481dc017f1fbfa7f937a97e66eb99f
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-subdir.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
