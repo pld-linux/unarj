@@ -11,7 +11,7 @@ Release:	9
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
-Copyright:	distributable
+License:	distributable
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
 Patch0:		%{name}-opt.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -45,7 +45,7 @@ unarj, arj biçimindeki arþivler için açma programýdýr. ARJ, DOS
 tabanlý makinelerde sýkça kullanýlan bir sýkýþtýrma biçimidir.
 
 %prep
-%setup -q -n %{name}241a
+%setup -q
 %patch0 -p1
 
 %build
