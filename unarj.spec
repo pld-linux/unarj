@@ -1,4 +1,3 @@
-# SECURITY TODO: CAN-2004-0947 CAN-2004-1027
 Summary:	Decompressor for .arj format archives
 Summary(de):	Dekomprimierer für .arj-Archive
 Summary(es):	Descompresor para archivos en formato .arj
@@ -10,12 +9,14 @@ Summary(tr):	ARJ biçimindeki arşivleri açan araç
 Summary(uk):	äÅËÏÍĞÒÅÓÏÒ ÄÌÑ ÁÒÈ¦×ÎÉÈ ÆÁÊÌ¦× ÆÏÒÍÁÔÕ .arj
 Name:		unarj
 Version:	2.63a
-Release:	2
+Release:	3
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
 # Source0-md5:	a83d139c245f911f22cb1b611ec9768f
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-overflow.patch
+Patch2:		%{name}-path.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,6 +58,8 @@ tabanlı makinelerde sıkça kullanılan bir sıkıştırma biçimidir.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} \
