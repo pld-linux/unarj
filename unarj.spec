@@ -1,17 +1,17 @@
-Summary:     decompressor for .arj format archives
-Summary(de): Dekomprimierer für .arj-Archive
-Summary(fr): Décompresseur pour les archives .arj .
-Summary(pl): Program rozpakowuj±cy archiwa ARJ
-Summary(tr): ARJ biçimindeki arþivleri açan araç
-Name:        unarj
-Version:     2.41a
-Release:     10
-Group:       Utilities/Archiving
-Group(pl):   Narzêdzia/Archiwizacja
-Copyright:   distributable
-Source:      ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}241a.tar.gz
-Patch:       %{name}-%{version}-opt.patch
-Buildroot:   /tmp/%{name}-%{version}-root
+Summary:	decompressor for .arj format archives
+Summary(de):	Dekomprimierer für .arj-Archive
+Summary(fr):	Décompresseur pour les archives .arj .
+Summary(pl):	Program rozpakowuj±cy archiwa ARJ
+Summary(tr):	ARJ biçimindeki arþivleri açan araç
+Name:		unarj
+Version:	2.41a
+Release:	10
+Group:		Utilities/Archiving
+Group(pl):	Narzêdzia/Archiwizacja
+Copyright:	distributable
+Source:		ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}241a.tar.gz
+Patch:		unarj-opt.patch
+Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
 The unarj program is used to uncompress .arj format archives,
@@ -38,7 +38,7 @@ makinelerde sýkça kullanýlan bir sýkýþtýrma biçimidir.
 %patch -p1
 
 %build
-make CFLAGS="-Wall -ansi -pedantic -DUNIX $RPM_OPT_FLAGS" LDFLAGS=-s
+make CFLAGS="-Wall -ansi -pedantic -DUNIX $RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT 
@@ -52,9 +52,9 @@ gzip -9nf unarj.doc
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %doc unarj.doc.gz
-%attr(755, root, root) /usr/bin/unarj
+%attr(755,root,root) /usr/bin/unarj
 
 %changelog
 * Thu Feb 25 1999 Maciej Le¶niewski <nimir@kis.p.lodz.pl>
