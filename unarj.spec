@@ -4,9 +4,9 @@ Summary(es):	Descompresor para archivos en formato .arj
 Summary(fr):	DИcompresseur pour les archives .arj
 Summary(pl):	Program rozpakowuj╠cy archiwa ARJ
 Summary(pt_BR):	Descompactador para arquivos no formato .arj
-Summary(ru): Декомпрессор для архивных файлов формата .arj
+Summary(ru):	Декомпрессор для архивных файлов формата .arj
 Summary(tr):	ARJ biГimindeki arЧivleri aГan araГ
-Summary(uk): Декомпресор для арх╕вних файл╕в формату .arj
+Summary(uk):	Декомпресор для арх╕вних файл╕в формату .arj
 Name:		unarj
 Version:	2.43
 Release:	11
@@ -71,12 +71,10 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install unarj $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf unarj.doc
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc unarj.doc.gz
+%doc unarj.doc
 %attr(755,root,root) %{_bindir}/unarj
