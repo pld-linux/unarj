@@ -1,4 +1,4 @@
-Summary:	decompressor for .arj format archives
+Summary:	Decompressor for .arj format archives
 Summary(de):	Dekomprimierer für .arj-Archive
 Summary(es):	Descompresor para archivos en formato .arj
 Summary(fr):	Décompresseur pour les archives .arj
