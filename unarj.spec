@@ -9,8 +9,6 @@ Name:		unarj
 Version:	2.43
 Release:	9
 Group:		Applications/Archiving
-Group(de):	Applikationen/Archivierung
-Group(pl):	Aplikacje/Archiwizacja
 License:	distributable
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
 Patch0:		%{name}-opt.patch
