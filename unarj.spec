@@ -38,7 +38,7 @@ makinelerde sýkça kullanýlan bir sýkýþtýrma biçimidir.
 %patch -p1
 
 %build
-make CFLAGS="-Wall -ansi -pedantic -DUNIX $RPM_OPT_FLAGS" LDFLAGS="-s"
+%{__make} CFLAGS="-Wall -ansi -pedantic -DUNIX $RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT 
