@@ -42,9 +42,9 @@ make CFLAGS="-Wall -ansi -pedantic -DUNIX $RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT 
-install -d $RPM_BUILD_ROOT/usr/bin
+install -d $RPM_BUILD_ROOT%{_bindir}
 
-install -s unarj $RPM_BUILD_ROOT/usr/bin
+install -s unarj $RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf unarj.doc
 
@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc unarj.doc.gz
-%attr(755,root,root) /usr/bin/unarj
+%attr(755,root,root) %{_bindir}/unarj
 
 %changelog
 * Thu Feb 25 1999 Maciej Le¶niewski <nimir@kis.p.lodz.pl>
