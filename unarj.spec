@@ -1,12 +1,12 @@
 Summary:	Decompressor for .arj format archives
-Summary(de.UTF-8):   Dekomprimierer für .arj-Archive
-Summary(es.UTF-8):   Descompresor para archivos en formato .arj
-Summary(fr.UTF-8):   Décompresseur pour les archives .arj
-Summary(pl.UTF-8):   Program rozpakowujący archiwa ARJ
-Summary(pt_BR.UTF-8):   Descompactador para arquivos no formato .arj
-Summary(ru.UTF-8):   Декомпрессор для архивных файлов формата .arj
-Summary(tr.UTF-8):   ARJ biçimindeki arşivleri açan araç
-Summary(uk.UTF-8):   Декомпресор для архівних файлів формату .arj
+Summary(de.UTF-8):	Dekomprimierer für .arj-Archive
+Summary(es.UTF-8):	Descompresor para archivos en formato .arj
+Summary(fr.UTF-8):	Décompresseur pour les archives .arj
+Summary(pl.UTF-8):	Program rozpakowujący archiwa ARJ
+Summary(pt_BR.UTF-8):	Descompactador para arquivos no formato .arj
+Summary(ru.UTF-8):	Декомпрессор для архивных файлов формата .arj
+Summary(tr.UTF-8):	ARJ biçimindeki arşivleri açan araç
+Summary(uk.UTF-8):	Декомпресор для архівних файлів формату .arj
 Name:		unarj
 Version:	2.63a
 Release:	3
