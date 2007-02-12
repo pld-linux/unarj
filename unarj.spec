@@ -1,12 +1,12 @@
 Summary:	Decompressor for .arj format archives
-Summary(de):	Dekomprimierer fЭr .arj-Archive
-Summary(es):	Descompresor para archivos en formato .arj
-Summary(fr):	DИcompresseur pour les archives .arj
-Summary(pl):	Program rozpakowuj╠cy archiwa ARJ
-Summary(pt_BR):	Descompactador para arquivos no formato .arj
-Summary(ru):	Декомпрессор для архивных файлов формата .arj
-Summary(tr):	ARJ biГimindeki arЧivleri aГan araГ
-Summary(uk):	Декомпресор для арх╕вних файл╕в формату .arj
+Summary(de.UTF-8):   Dekomprimierer fц╪r .arj-Archive
+Summary(es.UTF-8):   Descompresor para archivos en formato .arj
+Summary(fr.UTF-8):   Dц╘compresseur pour les archives .arj
+Summary(pl.UTF-8):   Program rozpakowujд┘cy archiwa ARJ
+Summary(pt_BR.UTF-8):   Descompactador para arquivos no formato .arj
+Summary(ru.UTF-8):   п■п╣п╨п╬п╪п©я─п╣я│я│п╬я─ п╢п╩я▐ п╟я─я┘п╦п╡п╫я▀я┘ я└п╟п╧п╩п╬п╡ я└п╬я─п╪п╟я┌п╟ .arj
+Summary(tr.UTF-8):   ARJ biц╖imindeki arе÷ivleri aц╖an araц╖
+Summary(uk.UTF-8):   п■п╣п╨п╬п╪п©я─п╣я│п╬я─ п╢п╩я▐ п╟я─я┘я√п╡п╫п╦я┘ я└п╟п╧п╩я√п╡ я└п╬я─п╪п╟я┌я┐ .arj
 Name:		unarj
 Version:	2.63a
 Release:	3
@@ -23,37 +23,37 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The unarj program is used to uncompress .arj format archives, which
 were somewhat popular on DOS based machines.
 
-%description -l de
+%description -l de.UTF-8
 Das Programm 'unarj' dient zum Dekomprimieren von Archiven im
-.arj-Format, das auf DOS-Rechnern einigermaъen beliebt ware.
+.arj-Format, das auf DOS-Rechnern einigermaц÷en beliebt ware.
 
-%description -l es
+%description -l es.UTF-8
 El programa unarj se usa para descomprimir almacenajes en formato
-.arj, que era algo popular en mАquinas DOS.
+.arj, que era algo popular en mц║quinas DOS.
 
-%description -l fr
-Le programme unarj est utilisИ pour dИcompresser des archives au
-format .arj, qui ont ИtИ trХs rИpandeus sur les systХmes DOS.
+%description -l fr.UTF-8
+Le programme unarj est utilisц╘ pour dц╘compresser des archives au
+format .arj, qui ont ц╘tц╘ trц╗s rц╘pandeus sur les systц╗mes DOS.
 
-%description -l pl
-Program unarj umo©liwa rozpakowanie archiwСw w formacie ARJ,
+%description -l pl.UTF-8
+Program unarj umoе╪liwa rozpakowanie archiwцЁw w formacie ARJ,
 popularnym w systemach opartych o DOS.
 
-%description -l pt_BR
-O programa unarj И usado para descomprimir armazenagens em formato
-.arj, que era algo popular em mАquinas DOS.
+%description -l pt_BR.UTF-8
+O programa unarj ц╘ usado para descomprimir armazenagens em formato
+.arj, que era algo popular em mц║quinas DOS.
 
-%description -l ru
-Программа unarj используется для декомпрессии архивов формата .arj,
-популярного преимущественно в мире DOS.
+%description -l ru.UTF-8
+п÷я─п╬пЁя─п╟п╪п╪п╟ unarj п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ п╢п╩я▐ п╢п╣п╨п╬п╪п©я─п╣я│я│п╦п╦ п╟я─я┘п╦п╡п╬п╡ я└п╬я─п╪п╟я┌п╟ .arj,
+п©п╬п©я┐п╩я▐я─п╫п╬пЁп╬ п©я─п╣п╦п╪я┐я┴п╣я│я┌п╡п╣п╫п╫п╬ п╡ п╪п╦я─п╣ DOS.
 
-%description -l tr
-unarj, arj biГimindeki arЧivler iГin aГma programЩdЩr. ARJ, DOS
-tabanlЩ makinelerde sЩkГa kullanЩlan bir sЩkЩЧtЩrma biГimidir.
+%description -l tr.UTF-8
+unarj, arj biц╖imindeki arе÷ivler iц╖in aц╖ma programд╠dд╠r. ARJ, DOS
+tabanlд╠ makinelerde sд╠kц╖a kullanд╠lan bir sд╠kд╠е÷tд╠rma biц╖imidir.
 
-%description -l uk
-Програма unarj використову╓ться для декомпрес╕╖ арх╕в╕в формату .arj,
-популярного переважно в св╕т╕ DOS.
+%description -l uk.UTF-8
+п÷я─п╬пЁя─п╟п╪п╟ unarj п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐я■я┌я▄я│я▐ п╢п╩я▐ п╢п╣п╨п╬п╪п©я─п╣я│я√я≈ п╟я─я┘я√п╡я√п╡ я└п╬я─п╪п╟я┌я┐ .arj,
+п©п╬п©я┐п╩я▐я─п╫п╬пЁп╬ п©п╣я─п╣п╡п╟п╤п╫п╬ п╡ я│п╡я√я┌я√ DOS.
 
 %prep
 %setup -q
