@@ -9,7 +9,7 @@ Summary(tr.UTF-8):	ARJ biçimindeki arşivleri açan araç
 Summary(uk.UTF-8):	Декомпресор для архівних файлів формату .arj
 Name:		unarj
 Version:	2.63a
-Release:	3
+Release:	4
 License:	distributable
 Group:		Applications/Archiving
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.gz
