@@ -1,0 +1,64 @@
+--- unarj-2.63a/unarj.c.orig	2015-01-01 11:59:19.488304823 +0000
++++ unarj-2.63a/unarj.c	2015-01-01 12:00:52.224968219 +0000
+@@ -703,7 +703,7 @@
+     }
+     if ((arj_flags & GARBLE_FLAG) != 0)
+     {
+-        printf(M_ENCRYPT);
++        printf("%s", M_ENCRYPT);
+         printf(M_SKIPPED, filename);
+         skip();
+         return -1;
+@@ -784,7 +784,7 @@
+     }
+     printf(M_EXTRACT, name);
+     if (host_os != OS && file_type == BINARY_TYPE)
+-        printf(M_DIFFHOST);
++        printf("%s", M_DIFFHOST);
+     printf("  ");
+ 
+     crc = CRC_MASK;
+@@ -800,10 +800,10 @@
+     set_ftime_mode(name, time_stamp, file_mode, (uint) host_os);
+ 
+     if ((crc ^ CRC_MASK) == file_crc)
+-        printf(M_CRCOK);
++        printf("%s", M_CRCOK);
+     else
+     {
+-        printf(M_CRCERROR);
++        printf("%s", M_CRCERROR);
+         error_count++;
+     }
+     return 1;
+@@ -829,10 +829,10 @@
+         decode_f();
+ 
+     if ((crc ^ CRC_MASK) == file_crc)
+-        printf(M_CRCOK);
++        printf("%s", M_CRCOK);
+     else
+     {
+-        printf(M_CRCERROR);
++        printf("%s", M_CRCERROR);
+         error_count++;
+     }
+     return 1;
+@@ -979,7 +979,7 @@
+     int i;
+ 
+     for (i = 0; M_USAGE[i] != NULL; i++)
+-        printf(M_USAGE[i]);
++        printf("%s", M_USAGE[i]);
+ }
+ 
+ int
+@@ -994,7 +994,7 @@
+     argc = ccommand(&argv);
+ #endif
+ 
+-    printf(M_VERSION);
++    printf("%s", M_VERSION);
+ 
+     if (argc == 1)
+     {

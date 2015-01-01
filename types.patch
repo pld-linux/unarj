@@ -1,0 +1,87 @@
+--- unarj-2.63a/environ.c.orig	2000-10-02 12:33:08.000000000 +0000
++++ unarj-2.63a/environ.c	2015-01-01 12:08:50.374951350 +0000
+@@ -430,16 +430,11 @@
+ 
+ #define SUBS_DEFINED
+ 
++#include <sys/types.h>
+ #include <time.h>
+-
+-#ifndef time_t
+-#define time_t long
+-#endif
+-
+-extern struct tm *localtime();
+-extern time_t time();
+-extern char   *strcpy();
+-extern voidp  *malloc();
++#include <utime.h>
++#include <string.h>
++#include <stdlib.h>
+ 
+ FILE *
+ file_open(name, mode)
+@@ -534,19 +529,19 @@
+         str[3] = 'R';
+ }
+ 
+-long
++time_t
+ gettz()         /* returns the offset from GMT in seconds */
+ {
+ #define NOONOFFSET    43200L
+ #define SEC_IN_DAY    (24L * 60L * 60L)
+ #define INV_VALUE     (SEC_IN_DAY + 1L)
+-    static long retval = INV_VALUE;
+-    long now, noon;
++    static time_t retval = INV_VALUE;
++    time_t now, noon;
+     struct tm *noontm;
+ 
+     if (retval != INV_VALUE)
+         return retval;
+-    now = (long) time((long *) 0);
++    now = time((time_t *) 0);
+     /* Find local time for GMT noon today */
+     noon = now - now % SEC_IN_DAY + NOONOFFSET ;
+     noontm = localtime(&noon);
+@@ -554,13 +549,13 @@
+     return retval;
+ }
+ 
+-long
++time_t
+ mstonix(tstamp)
+ ulong tstamp;
+ {
+     uint date, time;
+     int year, month, day, hour, min, sec, daycount;
+-    long longtime;
++    time_t longtime;
+     /* no. of days to beginning of month for each month */
+     static int dsboy[12] =
+         { 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334};
+@@ -599,20 +594,14 @@
+ uint  host;
+ {
+     time_t m_time;
+-    struct utimbuf
+-    {
+-       time_t atime;             /* New access time */
+-       time_t mtime;             /* New modification time */
+-    } tb;
+-
+-    (char *) name;
++    struct utimbuf tb;
+     (uint) attribute;
+     (uint) host;
+ 
+     m_time = mstonix(tstamp) + gettz();
+ 
+-    tb.mtime = m_time;                  /* Set modification time */
+-    tb.atime = m_time;                  /* Set access time */
++    tb.modtime = m_time;                 /* Set modification time */
++    tb.actime = m_time;                  /* Set access time */
+ 
+     /* set the time stamp on the file */
+     return utime(name, &tb);

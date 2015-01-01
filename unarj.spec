@@ -17,6 +17,8 @@ Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.g
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-overflow.patch
 Patch2:		%{name}-path.patch
+Patch3:		format-security.patch
+Patch4:		types.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,6 +62,8 @@ tabanlı makinelerde sıkça kullanılan bir sıkıştırma biçimidir.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 %{__make} \
